@@ -7,4 +7,16 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="start">Start</string>
     <string name="close">Close</string>
+
+    <string name="about_college">Shri. Someshwar Shikshan Prasarak Mandals Sharadchandra Pawar College of Engineering and Technology, Someshwarnagar established in 2012, is one of the self-financed Engineering colleges approved by AICTE New Delhi, Government of Maharashtra and DTE Mumbai. The institute is affiliated to Savitribai Phule Pune University (SPPU). The institute offers Engineering Courses in Mechanical Engineering, Civil Engineering, Computer Engineering and Electrical Engineering leading to BE degree as per SPPU University Curriculum.</string>
+   <string name="collge_name">Sharadchandra Pawar College of Engineering and Technology, Someshwarnagar</string>
+    <string name="college_address">OUR OFFICE LOCATION\n
+A/P : Someshwarnagar (Waghalwadi), Tal: Baramati Dist: Pune Pin 412306\n\n
+
+OUR CONTACT NUMBER\n
+9823141287\n\n
+
+OUR CONTACT E-MAIL\n
+principal@secsomeshwar.ac.in</string>
+
 </resources>
