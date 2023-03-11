@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.rajapps.spcoetcollege.ebook.EbookActivity;
 
 import java.util.Objects;
 
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
             case R.id.navigation_ebook:
-                Toast.makeText(this, "navigation_ebook", Toast.LENGTH_SHORT).show();
+               startActivity(new Intent(this, EbookActivity.class));
                 break;
 
 
