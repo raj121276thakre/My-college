@@ -2,6 +2,8 @@ package com.rajapps.spcoetcollege.ebook;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,17 +42,28 @@ public class EbookAdapter extends RecyclerView.Adapter<EbookAdapter.EbookViewHol
     public void onBindViewHolder(@NonNull EbookViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.ebookName.setText(list.get(position).getName());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, list.get(position).getName(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        // to open pdfviewer activity
+//        holder.itemView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                Intent intent = new Intent(context,PdfViewerActivity.class);
+////                intent.putExtra("pdfUrl",list.get(position).getPdfUrl());
+////                context.startActivity(intent);
+//            }
+//        });
 
+        // function for Download pdf
         holder.ebookDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Downloaded", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(list.get(position).getPdfUrl()));
+                context.startActivity(intent);
+
+
+
+             //  Toast.makeText(context, "Downloaded", Toast.LENGTH_SHORT).show();
             }
         });
 

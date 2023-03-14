@@ -2,6 +2,7 @@ package com.rajapps.spcoetcollege.ui.gallery;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rajapps.spcoetcollege.FullImageView;
 import com.rajapps.spcoetcollege.R;
 import com.squareup.picasso.Picasso;
 
@@ -44,6 +46,19 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        // used to see full image and zoom
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, FullImageView.class);
+                intent.putExtra("image", images.get(position));
+                context.startActivity(intent);
+            }
+        });
+
+
+
     }
 
     @Override
